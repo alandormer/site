@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What the platform understands</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            bg: '#0b0f14',
+            panel: '#111827',
+            panelSoft: '#1f2933',
+            accent: '#6366f1'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  </style>
+</head>
+<body class="dark bg-bg text-gray-200">
+
+<header class="sticky top-0 z-40 bg-panel/80 backdrop-blur border-b border-gray-800">
+  <div class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3">
+        <svg width="34" height="34" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#312e81"/>
+              <stop offset="100%" stop-color="#6366f1"/>
+            </linearGradient>
+          </defs>
+          <rect rx="10" ry="10" width="36" height="36" fill="url(#g)"/>
+          <circle cx="18" cy="18" r="6" fill="white"/>
+        </svg>
+        <span class="font-semibold tracking-tight">YourBrand</span>
+      </a>
+    </div>
+    <nav class="hidden md:flex items-center gap-6 text-sm">
+      <a href="index.html" class="text-gray-400 hover:text-white">Home</a>
+      <a href="index.html#how" class="text-gray-400 hover:text-white">How it works</a>
+      <a href="examples.html" class="text-gray-400 hover:text-white">Examples</a>
+      <a href="dashboard.html" class="text-gray-400 hover:text-white">Dashboard</a>
+      <a href="#" class="px-3 py-1.5 rounded-lg bg-accent text-white">Request access</a>
+    </nav>
+  </div>
+</header>
+
+<section class="max-w-5xl mx-auto px-6 py-16">
+  <h1 class="text-3xl font-bold mb-4">Understanding what matters on site</h1>
+  <p class="text-gray-400 max-w-2xl mb-4">
+    The platform observes activity, recognises context, and records what is relevant — without constant human monitoring.
+  </p>
+  <p class="text-gray-500 text-sm max-w-2xl mb-4">
+    Most camera systems either record video or trigger basic alerts. On their own, they provide limited understanding of what is actually happening. Activity passes by, alerts create noise, and little usable information remains.
+  </p>
+  <p class="text-gray-500 text-sm max-w-2xl mb-12">
+    This platform converts what cameras see into structured, time-stamped records. It applies consistent rules across feeds, stores observations as factual events, and makes site activity queryable — both in real time and after the fact.
+  </p>
+
+  <div class="grid md:grid-cols-2 gap-6">
+
+    <div class="bg-panel rounded-xl overflow-hidden flex flex-col">
+      <img src="static/images/PPE.png" alt="Safety and protective equipment" class="w-full aspect-[16/10] object-cover object-top" />
+      <div class="p-5">
+        <h3 class="text-base font-semibold mb-2">Safety and protective equipment</h3>
+        <p class="text-gray-400 text-sm">The platform observes PPE usage across camera feeds and logs compliance automatically. Safety conditions are monitored consistently and recorded for later review or audit.</p>
+      </div>
+    </div>
+
+    <div class="bg-panel rounded-xl overflow-hidden flex flex-col">
+      <img src="static/images/Vehicle.png" alt="Vehicles and movement" class="w-full aspect-[16/10] object-cover object-top" />
+      <div class="p-5">
+        <h3 class="text-base font-semibold mb-2">Vehicles and movement</h3>
+        <p class="text-gray-400 text-sm">Vehicle and pedestrian activity across yards, entrances, and operational areas is tracked over time. Movement patterns become queryable data.</p>
+      </div>
+    </div>
+
+    <div class="bg-panel rounded-xl overflow-hidden flex flex-col">
+      <img src="static/images/Detection.png" alt="Sensitive or restricted zones" class="w-full aspect-[16/10] object-cover object-top" />
+      <div class="p-5">
+        <h3 class="text-base font-semibold mb-2">Sensitive or restricted zones</h3>
+        <p class="text-gray-400 text-sm">Activity in defined areas is recorded with full context. When something happens, the system captures a structured timeline for review and reporting.</p>
+      </div>
+    </div>
+
+    <div class="bg-panel rounded-xl overflow-hidden flex flex-col">
+      <img src="static/images/Fall.png" alt="Noteworthy events" class="w-full aspect-[16/10] object-cover object-top" />
+      <div class="p-5">
+        <h3 class="text-base font-semibold mb-2">Noteworthy events</h3>
+        <p class="text-gray-400 text-sm">Unusual or important moments are preserved as factual, time-stamped records. Events are structured, stored, and ready for investigation or handover.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="text-gray-500 text-sm mt-12 max-w-2xl">
+    The platform does not replace people. It gives teams clarity, context, and memory across complex environments.
+  </p>
+</section>
+
+<footer class="bg-panelSoft border-t border-gray-800 py-8 text-center text-gray-500">
+  © 2025 YourBrand. All rights reserved.
+</footer>
+
+</body>
+</html>
