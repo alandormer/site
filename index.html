@@ -54,72 +54,221 @@
 </header>
 
 <!-- Hero / Overview -->
-<section id="overview" class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
+<section id="overview" class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
   <div>
-    <h1 class="text-4xl font-bold mb-6">Turn cameras into site intelligence</h1>
-    <p class="text-lg text-gray-400 mb-6">Move beyond recording and alerts. Understand what is happening across your site — in real time and over time.</p>
-    <p class="text-gray-400 mb-8">The platform converts live camera activity into structured, queryable operational data for security, safety, and compliance teams.</p>
+    <p class="text-accent text-sm font-medium mb-3">Site Intelligence Layer</p>
+    <h1 class="text-4xl font-bold mb-6 leading-tight">Structured intelligence for physical operations</h1>
+    <p class="text-lg text-gray-400 mb-4">The system converts activity across your site into structured, time-stamped records — stored persistently, queryable over time, and ready for review, reporting, and audit.</p>
+    <p class="text-gray-500 text-sm mb-8">CCTV records video. Alert systems interrupt operators. An intelligence layer creates understanding.</p>
     <div class="flex gap-4">
-      <a href="#how" class="px-5 py-3 bg-accent rounded-xl text-white">How it works</a>
-      <a href="#" class="px-5 py-3 border border-gray-700 rounded-xl hover:bg-panelSoft">Request access</a>
+      <a href="#how" class="px-5 py-3 bg-accent rounded-xl text-white text-sm font-medium">How it works</a>
+      <a href="#" class="px-5 py-3 border border-gray-700 rounded-xl hover:bg-panelSoft text-sm">Request access</a>
     </div>
   </div>
-  <div class="bg-panel rounded-2xl p-4 shadow-lg">
+  <div class="bg-panel rounded-2xl p-3 shadow-lg">
     <img src="static/images/dashboard-hero.png" alt="Platform dashboard" class="rounded-xl w-full" />
   </div>
 </section>
 
-<!-- What it does -->
-<section class="bg-panelSoft">
-  <div class="max-w-7xl mx-auto px-6 py-20">
-    <h2 class="text-3xl font-bold mb-12 text-center">What this platform does</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-panel p-6 rounded-2xl">
-        <svg class="w-8 h-8 mb-4 text-gray-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-        <h3 class="text-xl font-semibold mb-2">Observe activity</h3>
-        <p class="text-gray-400">Continuously observes activity across camera feeds using consistent rules and logic.</p>
+<!-- What changes -->
+<section class="border-t border-gray-800">
+  <div class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="text-2xl font-bold mb-3">What changes when you add a site intelligence layer</h2>
+    <p class="text-gray-500 max-w-2xl mb-14">Most systems record video or push alerts. Neither creates usable knowledge. An intelligence layer changes what information you retain and what you can do with it.</p>
+    
+    <div class="space-y-10">
+      
+      <div class="flex gap-5 items-start">
+        <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-panel flex items-center justify-center">
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">Continuous observation of site activity</h3>
+          <p class="text-gray-400 text-sm">Activity is observed continuously without relying on someone watching. Presence, movement, and behaviour are detected automatically across the site.</p>
+        </div>
       </div>
-      <div class="bg-panel p-6 rounded-2xl">
-        <svg class="w-8 h-8 mb-4 text-gray-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
-        </svg>
-        <h3 class="text-xl font-semibold mb-2">Structure events</h3>
-        <p class="text-gray-400">Converts observations into factual, time-stamped events that can be reviewed later.</p>
+
+      <div class="flex gap-5 items-start">
+        <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-panel flex items-center justify-center">
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">Consistent analysis applied across the site</h3>
+          <p class="text-gray-400 text-sm">Specialised modules apply consistent rules to every observation. Safety, access, and behaviour are evaluated the same way, every time — without fatigue or variation.</p>
+        </div>
       </div>
-      <div class="bg-panel p-6 rounded-2xl">
-        <svg class="w-8 h-8 mb-4 text-gray-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-        </svg>
-        <h3 class="text-xl font-semibold mb-2">Build understanding</h3>
-        <p class="text-gray-400">Creates a long-term operational record of how a site actually functions day to day.</p>
+
+      <div class="flex gap-5 items-start">
+        <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-panel flex items-center justify-center">
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">Activity converted into structured, time-stamped records</h3>
+          <p class="text-gray-400 text-sm">Observations become structured events — factual, normalised, and auditable. These are not alerts or clips. They are records of what occurred.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-5 items-start">
+        <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-panel flex items-center justify-center">
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">Persistent site memory rather than momentary visibility</h3>
+          <p class="text-gray-400 text-sm">All events are stored persistently. Nothing is lost by default. Activity from last week or last month can be reviewed with the same fidelity as yesterday.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-5 items-start">
+        <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-panel flex items-center justify-center">
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">Clear reporting and review based on recorded facts</h3>
+          <p class="text-gray-400 text-sm">Shift handovers, compliance records, incident reports, and audit trails are generated directly from stored events. Documentation is consistent and traceable.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section id="how" class="border-t border-gray-800">
+  <div class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="text-2xl font-bold mb-3">How it works</h2>
+    <p class="text-gray-500 max-w-2xl mb-14">Five layers turn raw camera feeds into structured operational memory.</p>
+
+    <!-- 5-step pipeline with dotted line connector -->
+    <div class="relative">
+      <!-- Dotted connector line (hidden on mobile) -->
+      <div class="hidden md:block absolute top-8 left-[10%] right-[10%] border-t-2 border-dashed border-gray-700"></div>
+      
+      <div class="grid md:grid-cols-5 gap-6">
+        
+        <!-- Step 1 -->
+        <div class="relative text-center">
+          <div class="relative z-10 w-16 h-16 mx-auto mb-4 rounded-full bg-panel border border-gray-700 flex items-center justify-center">
+            <svg class="w-7 h-7 text-gray-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="font-semibold mb-2">Observe site activity</h3>
+          <p class="text-gray-500 text-sm">Feeds are analysed locally, continuously. Presence, movement, and behaviour are detected automatically.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative text-center">
+          <div class="relative z-10 w-16 h-16 mx-auto mb-4 rounded-full bg-panel border border-gray-700 flex items-center justify-center">
+            <svg class="w-7 h-7 text-gray-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="font-semibold mb-2">Analyse activity</h3>
+          <p class="text-gray-500 text-sm">Configurable modules apply consistent rules. Safety, access, and behaviour evaluated without variation or fatigue.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative text-center">
+          <div class="relative z-10 w-16 h-16 mx-auto mb-4 rounded-full bg-panel border border-gray-700 flex items-center justify-center">
+            <svg class="w-7 h-7 text-gray-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+            </svg>
+          </div>
+          <h3 class="font-semibold mb-2">Structure events</h3>
+          <p class="text-gray-500 text-sm">Activity becomes structured, time-stamped records. Factual, normalised, and auditable.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="relative text-center">
+          <div class="relative z-10 w-16 h-16 mx-auto mb-4 rounded-full bg-panel border border-gray-700 flex items-center justify-center">
+            <svg class="w-7 h-7 text-gray-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+            </svg>
+          </div>
+          <h3 class="font-semibold mb-2">Store site memory</h3>
+          <p class="text-gray-500 text-sm">All events stored persistently. Nothing is lost. Query last week or last month with the same fidelity.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="relative text-center">
+          <div class="relative z-10 w-16 h-16 mx-auto mb-4 rounded-full bg-panel border border-gray-700 flex items-center justify-center">
+            <svg class="w-7 h-7 text-gray-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <h3 class="font-semibold mb-2">Review and report</h3>
+          <p class="text-gray-500 text-sm">Operators query timelines. Managers generate reports. Auditors trace activity back to source.</p>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
 
-<!-- How it works (separate section) -->
-<section id="how" class="max-w-7xl mx-auto px-6 py-20">
-  <h2 class="text-3xl font-bold mb-12 text-center">How it works</h2>
-  <div class="grid md:grid-cols-4 gap-6 text-sm">
-    <div class="bg-panel p-6 rounded-xl">Ingests live video and site data</div>
-    <div class="bg-panel p-6 rounded-xl">Applies consistent analysis rules</div>
-    <div class="bg-panel p-6 rounded-xl">Stores structured events</div>
-    <div class="bg-panel p-6 rounded-xl">Enables review, reporting, and audit</div>
+<!-- Data control -->
+<section class="border-t border-gray-800">
+  <div class="max-w-6xl mx-auto px-6 py-20">
+    <div class="max-w-3xl">
+      <p class="text-accent text-sm font-medium mb-2">Data control</p>
+      <h2 class="text-2xl font-bold mb-4">Built for controlled, offline, and sovereign environments</h2>
+      <p class="text-gray-400 mb-8">The platform runs where your data lives — on-premise, at the edge, or in air-gapped environments. No mandatory cloud. No external dependencies.</p>
+      
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+          <span class="text-gray-300 text-sm">Runs entirely on-premise or at the edge</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+          <span class="text-gray-300 text-sm">Local models — no external AI services required</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+          <span class="text-gray-300 text-sm">Full control over retention, access, and deletion</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+          <span class="text-gray-300 text-sm">Video and derived data stay where you decide</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- Links to other pages -->
-<section class="max-w-7xl mx-auto px-6 py-12 flex justify-center gap-8 text-sm">
-  <a href="understanding.html" class="text-accent hover:underline">What the platform understands →</a>
-  <a href="examples.html" class="text-accent hover:underline">View example use cases →</a>
+<section class="border-t border-gray-800">
+  <div class="max-w-6xl mx-auto px-6 py-16 flex flex-col sm:flex-row justify-center gap-6 sm:gap-12 text-sm">
+    <a href="understanding.html" class="text-accent hover:underline">What the platform understands →</a>
+    <a href="examples.html" class="text-accent hover:underline">Example use cases →</a>
+    <a href="dashboard.html" class="text-accent hover:underline">Preview the dashboard →</a>
+  </div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-panelSoft border-t border-gray-800 py-8 text-center text-gray-500">
-  © 2025 YourBrand. All rights reserved.
+<footer class="border-t border-gray-800 py-8 text-center text-gray-600 text-sm">
+  © 2025
 </footer>
 
 </body>
