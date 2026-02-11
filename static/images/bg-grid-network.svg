@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <!-- subtle grid -->
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    </pattern>
+
+    <!-- soft fade so it doesn't look "stamped" -->
+    <radialGradient id="fade" cx="60%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.10)"/>
+      <stop offset="60%" stop-color="rgba(255,255,255,0.05)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.00)"/>
+    </radialGradient>
+
+    <filter id="blur" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="700" fill="url(#grid)"/>
+  <rect width="1200" height="700" fill="url(#fade)"/>
+
+  <!-- faint network lines -->
+  <g stroke="rgba(120,160,255,0.10)" stroke-width="1" fill="none" filter="url(#blur)">
+    <path d="M120 540 L260 420 L420 470 L560 330 L740 360 L900 260 L1060 300"/>
+    <path d="M160 250 L320 300 L470 210 L640 240 L820 160 L980 190"/>
+    <path d="M220 620 L360 520 L520 560 L690 450 L860 500 L1040 420"/>
+  </g>
+
+  <!-- nodes -->
+  <g fill="rgba(120,160,255,0.18)" filter="url(#blur)">
+    <circle cx="120" cy="540" r="4"/><circle cx="260" cy="420" r="4"/><circle cx="420" cy="470" r="4"/>
+    <circle cx="560" cy="330" r="4"/><circle cx="740" cy="360" r="4"/><circle cx="900" cy="260" r="4"/>
+    <circle cx="1060" cy="300" r="4"/>
+    <circle cx="160" cy="250" r="3.5"/><circle cx="320" cy="300" r="3.5"/><circle cx="470" cy="210" r="3.5"/>
+    <circle cx="640" cy="240" r="3.5"/><circle cx="820" cy="160" r="3.5"/><circle cx="980" cy="190" r="3.5"/>
+    <circle cx="220" cy="620" r="3.5"/><circle cx="360" cy="520" r="3.5"/><circle cx="520" cy="560" r="3.5"/>
+    <circle cx="690" cy="450" r="3.5"/><circle cx="860" cy="500" r="3.5"/><circle cx="1040" cy="420" r="3.5"/>
+  </g>
+</svg>
