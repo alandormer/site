@@ -24,16 +24,27 @@
     body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
     .hero-bg {
       position: relative;
-      background: url('static/images/reports2.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      overflow: hidden;
     }
     .hero-bg::before {
       content: '';
       position: absolute;
+      top: -15%;
+      right: -5%;
+      width: 75%;
+      height: 130%;
+      background: url('static/images/dashgeneral.png');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.3;
+      transform: rotate(-6deg);
+      pointer-events: none;
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
       inset: 0;
-      background: linear-gradient(to right, rgba(11,15,20,0.95) 0%, rgba(11,15,20,0.85) 40%, rgba(11,15,20,0.6) 100%);
+      background: linear-gradient(to right, rgba(11,15,20,0.95) 0%, rgba(11,15,20,0.75) 50%, rgba(11,15,20,0.3) 100%);
       z-index: 0;
     }
     .hero-bg > * {
@@ -42,24 +53,22 @@
     }
     .ops-gradient {
       background: linear-gradient(to bottom, #1f2933 0%, #151b24 100%);
-      position: relative;
-      overflow: hidden;
     }
-    .ops-gradient::before {
-      content: '';
-      position: absolute;
-      top: -20%;
-      right: -10%;
-      width: 70%;
-      height: 140%;
-      background: url('static/images/dashgeneral.png');
+    .reports-bg {
+      position: relative;
+      background: url('static/images/reports2.png');
       background-size: cover;
       background-position: center;
-      opacity: 0.08;
-      transform: rotate(-8deg);
-      pointer-events: none;
+      background-repeat: no-repeat;
     }
-    .ops-gradient > * {
+    .reports-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(11,15,20,0.92) 0%, rgba(11,15,20,0.85) 40%, rgba(11,15,20,0.7) 100%);
+      z-index: 0;
+    }
+    .reports-bg > * {
       position: relative;
       z-index: 1;
     }
@@ -96,16 +105,16 @@
 <section class="hero-bg">
   <div class="max-w-6xl mx-auto px-6 py-28">
     <div class="grid md:grid-cols-2 gap-12 items-center">
-      <div class="max-w-xl">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Operational Dashboard</h1>
-        <p class="text-gray-200 text-lg mb-4">
-          The dashboard is the control layer of the platform. It provides real-time visibility of site activity while maintaining a structured, searchable record for review, reporting, and oversight.
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight tracking-tight">Operational Dashboard</h1>
+        <p class="text-gray-200 text-lg mb-4 leading-relaxed">
+          The operational dashboard provides real-time visibility of site activity and a structured record for review, reporting, and oversight.
         </p>
-        <p class="text-gray-300 text-base mb-4">
-          Live events are monitored as they happen. Structured records are stored automatically, allowing operators to respond immediately and generate formal outputs when required.
+        <p class="text-gray-300 text-base mb-4 leading-relaxed">
+          Live events are surfaced as they occur. Every event is stored as structured data, enabling investigation, reporting, and operational traceability.
         </p>
-        <p class="text-gray-300 text-base">
-          All features operate on structured event data — not raw video playback.
+        <p class="text-gray-300 text-base leading-relaxed">
+      
         </p>
       </div>
       <div class="bg-panel/40 rounded-xl p-2 shadow-2xl backdrop-blur-sm">
@@ -116,138 +125,105 @@
 </section>
 
 <!-- Live Operations -->
-<section class="ops-gradient">
-  <div class="max-w-7xl mx-auto px-6 py-16">
-    <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-center">Live Operations</h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<section class="ops-gradient mt-4">
+  <div class="max-w-6xl mx-auto px-6 py-24">
+    <h2 class="text-3xl md:text-4xl font-semibold mb-12 text-center tracking-tight">Live Operations</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
       
-      <div class="bg-panel/80 rounded-xl p-4 border border-gray-700 hover:border-accent/50 transition-colors">
-        <div class="flex items-center gap-2 mb-2">
-          <div class="w-7 h-7 rounded-lg bg-panelSoft flex items-center justify-center flex-shrink-0">
-            <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+      <div class="bg-panel/80 rounded-xl p-6 border border-gray-700 hover:border-accent/50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl flex flex-col">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded-lg bg-panelSoft flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
             </svg>
           </div>
-          <h3 class="font-semibold text-gray-200 text-sm">Real-time feed</h3>
+          <h3 class="font-semibold text-gray-100">Real-time feed</h3>
         </div>
-        <p class="text-gray-400 text-sm">Live event stream as activity is detected across monitored zones.</p>
+        <p class="text-gray-400 text-sm leading-relaxed flex-grow">Live structured event stream as activity is detected across monitored zones.</p>
       </div>
       
-      <div class="bg-panel/80 rounded-xl p-4 border border-gray-700 hover:border-accent/50 transition-colors">
-        <div class="flex items-center gap-2 mb-2">
-          <div class="w-7 h-7 rounded-lg bg-panelSoft flex items-center justify-center flex-shrink-0">
-            <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+      <div class="bg-panel/80 rounded-xl p-6 border border-gray-700 hover:border-accent/50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl flex flex-col">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded-lg bg-panelSoft flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
             </svg>
           </div>
-          <h3 class="font-semibold text-gray-200 text-sm">Rule triggers</h3>
+          <h3 class="font-semibold text-gray-100">Rule triggers</h3>
         </div>
-        <p class="text-gray-400 text-sm">Active alerts when defined conditions are met or violated.</p>
+        <p class="text-gray-400 text-sm leading-relaxed flex-grow">Configurable rule engine generates alerts when defined conditions are met or breached.</p>
       </div>
       
-      <div class="bg-panel/80 rounded-xl p-4 border border-gray-700 hover:border-accent/50 transition-colors">
-        <div class="flex items-center gap-2 mb-2">
-          <div class="w-7 h-7 rounded-lg bg-panelSoft flex items-center justify-center flex-shrink-0">
-            <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+      <div class="bg-panel/80 rounded-xl p-6 border border-gray-700 hover:border-accent/50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl flex flex-col">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded-lg bg-panelSoft flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
             </svg>
           </div>
-          <h3 class="font-semibold text-gray-200 text-sm">Zone monitoring</h3>
+          <h3 class="font-semibold text-gray-100">Zone monitoring</h3>
         </div>
-        <p class="text-gray-400 text-sm">Track activity and conditions across defined site areas.</p>
+        <p class="text-gray-400 text-sm leading-relaxed flex-grow">Continuous monitoring of defined areas, restricted zones, and operational boundaries.</p>
       </div>
       
-      <div class="bg-panel/80 rounded-xl p-4 border border-gray-700 hover:border-accent/50 transition-colors">
-        <div class="flex items-center gap-2 mb-2">
-          <div class="w-7 h-7 rounded-lg bg-panelSoft flex items-center justify-center flex-shrink-0">
-            <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+      <div class="bg-panel/80 rounded-xl p-6 border border-gray-700 hover:border-accent/50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl flex flex-col">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded-lg bg-panelSoft flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
             </svg>
           </div>
-          <h3 class="font-semibold text-gray-200 text-sm">Operator response</h3>
+          <h3 class="font-semibold text-gray-100">Operator response</h3>
         </div>
-        <p class="text-gray-400 text-sm">Immediate visibility for on-duty teams to act on live events.</p>
+        <p class="text-gray-400 text-sm leading-relaxed flex-grow">Immediate visibility for on-duty teams to assess and act on live site activity.</p>
       </div>
       
     </div>
   </div>
 </section>
 
-<!-- Review, Reports & Investigation -->
-<section class="bg-bg">
-  <div class="max-w-6xl mx-auto px-6 py-16">
-    <div class="grid md:grid-cols-2 gap-10 items-start">
-      <div>
-        <h2 class="text-xl md:text-2xl font-semibold mb-4">Review, Reports & Investigation</h2>
-        <p class="text-gray-400 text-sm mb-5">
-          All operational outputs are generated from the structured event record. Review activity, generate reports, and investigate incidents from factual, time-stamped data.
-        </p>
-        
-        <div class="space-y-4">
-          <div>
-            <h3 class="text-sm font-semibold text-gray-300 mb-2">Timeline Review</h3>
-            <ul class="space-y-1.5 text-gray-400 text-sm">
-              <li class="flex items-start gap-2">
-                <span class="text-accent mt-0.5">•</span>
-                <span>Chronological event sequences by camera, zone, or time</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-accent mt-0.5">•</span>
-                <span>Incident context with full event history</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-accent mt-0.5">•</span>
-                <span>Activity summaries by hour, shift, or day</span>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 class="text-sm font-semibold text-gray-300 mb-2">Structured Reporting</h3>
-            <ul class="space-y-1.5 text-gray-400 text-sm">
-              <li class="flex items-start gap-2">
-                <span class="text-accent mt-0.5">•</span>
-                <span>Shift handover summaries</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-accent mt-0.5">•</span>
-                <span>Incident reports with timeline and evidence</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-accent mt-0.5">•</span>
-                <span>Compliance and audit records</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-accent mt-0.5">•</span>
-                <span>Export as HTML, PDF, or CSV</span>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 class="text-sm font-semibold text-gray-300 mb-2">Event Search</h3>
-            <ul class="space-y-1.5 text-gray-400 text-sm">
-              <li class="flex items-start gap-2">
-                <span class="text-accent mt-0.5">•</span>
-                <span>Query by time range, location, or event type</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-accent mt-0.5">•</span>
-                <span>Historical investigation over days, weeks, or months</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-accent mt-0.5">•</span>
-                <span>Pattern and anomaly detection</span>
-              </li>
-            </ul>
-          </div>
+<!-- Review, Reporting & Investigation -->
+<section class="reports-bg mt-4">
+  <div class="max-w-6xl mx-auto px-6 py-24">
+    <div class="text-center mb-14">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-6 tracking-tight">Review, Reporting & Investigation</h2>
+      <p class="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto">
+        Structured site activity becomes formal operational records. Investigate incidents, generate documentation, and review historical events — all grounded in factual, time-stamped data.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <div class="bg-panel/60 rounded-xl p-8 border border-gray-700/50">
+        <div class="w-12 h-12 rounded-lg bg-panelSoft flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
         </div>
+        <h3 class="text-xl font-semibold text-gray-100 mb-3">Review</h3>
+        <p class="text-gray-300 leading-relaxed">Timeline review by camera, zone, or time. Full incident context reconstructed from recorded events.</p>
       </div>
-      <div>
-        <div class="rounded-xl overflow-hidden shadow-xl">
-          <img src="static/images/heatmap.png" alt="Timeline review" class="w-full scale-110 origin-center" />
+      
+      <div class="bg-panel/60 rounded-xl p-8 border border-gray-700/50">
+        <div class="w-12 h-12 rounded-lg bg-panelSoft flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+          </svg>
         </div>
+        <h3 class="text-xl font-semibold text-gray-100 mb-3">Reporting</h3>
+        <p class="text-gray-300 leading-relaxed">Shift handovers, incident summaries, and compliance documentation. Exportable as PDF, HTML, or CSV.</p>
       </div>
+      
+      <div class="bg-panel/60 rounded-xl p-8 border border-gray-700/50">
+        <div class="w-12 h-12 rounded-lg bg-panelSoft flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-100 mb-3">Search</h3>
+        <p class="text-gray-300 leading-relaxed">Query by time range, location, or event type. Investigate stored site activity across days or months.</p>
+      </div>
+      
     </div>
   </div>
 </section>
