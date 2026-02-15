@@ -54,6 +54,24 @@
     .ops-gradient {
       background: linear-gradient(to bottom, #1f2933 0%, #151b24 100%);
     }
+    .footer-banner {
+      position: relative;
+      overflow: hidden;
+    }
+    .footer-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('static/images/Banner.png');
+      background-size: cover;
+      background-position: center bottom;
+      opacity: 0.06;
+      pointer-events: none;
+    }
+    .footer-banner > * {
+      position: relative;
+      z-index: 1;
+    }
     .reports-bg {
       position: relative;
       background: url('static/images/reports2.png');
@@ -123,7 +141,7 @@
 
 <!-- Live Operations -->
 <section class="ops-gradient mt-4">
-  <div class="max-w-6xl mx-auto px-6 py-16">
+  <div class="max-w-6xl mx-auto px-6 pt-16 pb-24">
     <h2 class="text-2xl md:text-3xl font-semibold mb-2 text-center tracking-tight">Live Operations</h2>
     <p class="text-gray-400 text-sm text-center mb-8">Site activity and events are reported as they happen, enabling immediate operational response.</p>
     <div class="grid md:grid-cols-3 gap-5">
@@ -177,7 +195,7 @@
       <div class="max-w-md">
         <h2 class="text-2xl md:text-3xl font-semibold mb-3 tracking-tight">Operational Memory & Investigation</h2>
         <p class="text-gray-300 text-sm leading-relaxed mb-3">
-          Operational activity is persistently recorded as structured event data, creating a verifiable site record that can be reviewed, reconstructed, and documented without relying on raw video playback. All investigation and reporting functions operate directly on this structured record.        </p>
+          Operational activity is persistently recorded as structured event data, creating a verifiable site record that can be reviewed and documented. All investigation and reporting functions operate directly on this structured record.        </p>
         <p class="text-gray-400 text-sm leading-relaxed">
           Because all events are logged and stored, the result is not just live awareness, but a durable, queryable record of how the site actually operated.
         </p>
@@ -217,7 +235,7 @@
 </section>
 
 <!-- Footer -->
-<footer class="border-t border-gray-800 bg-bg py-6 text-center text-gray-600 text-sm">
+<footer class="footer-banner border-t border-gray-800 bg-bg py-10 text-center text-gray-600 text-sm">
   © 2026
 </footer>
 
